@@ -1,0 +1,86 @@
+.yoyakuInfo{
+    
+    background-image: url(../img/bgi.png);
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    margin: 0 auto;
+
+    display: flex; /* flexbox */
+    justify-content: center; /* 兩邊對齊 */
+    align-items: center; /* 垂直居中 */
+}
+.yoyakuMap{
+    width: 600px;
+}
+
+.yoyakuForm{
+    width: 600px;
+}
+.yoyakuForm p{
+    font-size: 24px;
+    text-align: center;
+    margin: 20px;
+}
+
+.yoyakuFormContent{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.formGruop{
+    /* 表單格之間的間距 */
+    margin: 0 10px 20px;
+    text-align: center;
+}
+
+.gruop{
+    /* 表單內容與外框 */
+    color: black;
+    width: 90%;
+    font-size: 20px;
+    padding: 10px 0;
+    border: 0px;
+    border-radius: 30px;
+    padding-right: 10px;
+
+    text-align: center;
+}
+
+
+/* 備註 */
+.message{
+    color: black;
+    width: 90%;
+    height: 150px;
+    font-size: 20px;
+    padding: 20px 0;
+    border-radius: 30px;
+    text-align: center;
+}
+textarea::placeholder{
+    text-align: center;
+}
+
+.btn{
+    display: block;
+    width: 200px;
+    padding: 20px 0;
+    margin: 0 auto;
+    text-align: center;
+    
+    margin-bottom: 20px;
+}
+
+.btnSend{
+    font-size: 20px;
+    border-radius: 50px;
+    background-color: #e08e58;
+    
+}
+.btnSend a{
+    color: aliceblue;
+    text-decoration: none;
+}

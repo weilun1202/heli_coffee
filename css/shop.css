@@ -1,0 +1,110 @@
+
+.needBgi{
+    background-image: url(../img/bgi\ freepik.jpg);
+    background-size: cover;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.shopMain{
+    display: flex;
+
+    /* 大圖置中 */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+    margin: 0 auto;
+
+    /* 最大寬度，內容居中 */
+    max-width: 1200px; 
+    /* 增加內邊距 */
+    padding: 20px; 
+}
+
+.shopMain img{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 16px;
+    transition: all 1s linear;
+}
+
+.shopMain img:hover{
+    transform: scale(1.1); /* 用 scale() 來放大 */
+    transition: transform 1s, color 1s;
+}
+
+.shopMain ul{
+    display: flex;
+    flex-wrap: wrap;
+    
+    width: 980px;
+    justify-content: space-between; /*  */
+    gap: 24px; /* 卡片之間的間距 */
+}
+
+.shopMain li{
+    
+    background-color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0 5px 10px;
+    border-radius: 8px;
+    
+    text-align: left;
+
+    flex-basis: 300px;
+    /* flex-grow: 1; */
+
+    /* 按鈕靠右 */
+    position: relative;
+
+
+}
+
+
+.quantity{
+    font-size: 16px;
+    padding: 0 5px;
+    
+    border-radius: 8px;
+}
+
+
+.shopMain_button{
+    
+    text-align: right;
+}
+
+#submit{
+    width: 160px;
+	font-size: 20px;
+
+    border: ipx solid;
+
+    border-radius: 8px;
+
+    position: relative;
+    left: 120px;
+    bottom: 5px;
+}
+
+.goToCar{
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    display: block;
+    text-align: right;
+    margin-top: 20px;
+}
+.goToCar a{
+    text-decoration: none;
+    font-size: 24px;
+    color: #464545;
+    background-color: #f0f0f0;
+    border: 1px solid #464545;
+    border-radius: 8px;
+    padding: 0 20px;
+}

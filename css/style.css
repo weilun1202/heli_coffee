@@ -1,0 +1,289 @@
+@import url('reset.css');
+@import url('about.css');
+@import url('menu.css');
+@import url('shop.css');
+@import url('yoyaku.css');
+@import url('shoppingcar.css');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Zen Kaku Gothic Antique", sans-serif;;
+    line-height: 1.6;
+    background-color: #f8e2d3;
+}
+  
+.top{
+    background-color: #E08E58;
+    position: relative;
+    z-index: 10;
+}
+  
+.topMain{
+    width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+
+    display: flex; /* flexbox */
+    justify-content: space-between; /* 兩邊對齊 */
+    align-items: center; /* 垂直居中 */
+}
+  
+.topMain img{
+    height: 60px;
+    
+    transition: all 1s linear;
+}
+.topMain img:hover {
+    transform: scale(1.2); /* 用 scale() 來放大 */
+    transition: transform 1s, color 1s linear;
+}
+
+.topMain ul{
+    display: flex; /* flexbox 將 ul 內的項目水平排列 */
+    list-style: none; /* 移除預設的點 */
+}
+
+  
+.topMain li{
+    float: left;
+    line-height: 80px;
+}
+  
+.topMain a{
+    display: block;
+    text-align: center;
+    color: #362e2b;
+    text-decoration: none;
+    padding: 0 20px;
+
+    transition: all 1s linear;
+}
+  
+.topMain li a:hover{
+    color: white;
+    transform: scale(1.2); /* 用 scale() 來放大 */
+    transition: transform 1s, color 1s; /* 加入 transform 的過渡效果 */
+}
+
+
+/* ------------------ banner ------------------ */
+
+.banner{
+    background-image: url(../img/banner01.jpg);
+    background-size: cover;
+    background-position: center bottom;
+
+    width: 1240px;
+    height: 550px;
+    margin: 0 auto;
+
+    position: relative;
+}
+  
+.bannerMain{
+    position: absolute;
+
+    /* 文字定位 */
+    top: 70%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+
+    /* 文字動畫 */
+    opacity: 0; /* 初始為隱藏 */
+    animation: fadeIn 1s ease-out forwards; /* 2秒慢慢出現 */
+}
+  
+.bannerMain h1{
+    color: aliceblue;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+  
+.bannerMain h2{
+    color: aliceblue;
+    font-size: 32px;
+}
+.bannerMain p{
+    font-size: 24px;
+    color: aliceblue;
+}
+/* ------------------ 文字動畫 ------------------ */
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* ------------------ swiper ------------------ */
+.swiper ul{
+    display: flex;
+    padding: 30px 20px;
+}
+
+.swiper li{
+    outline: 1px solid #ccc;
+    width: 300px;
+    margin: 0 10px;
+}
+
+.swiper li img{
+    display: block;
+    /* width: 100%; */
+}
+.swiper{
+    display: flex;
+}
+
+.swiper img{
+    width: 300px;
+    height: 300px;
+}
+
+main{
+    margin-bottom: 20px;
+}
+
+/* ------------------ limited_time 大標題 ------------------ */
+
+.title{
+    text-align: center;
+}
+.title h1{
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+}
+
+.title h1:before, .title h1:after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: #979797;
+    width: 300px;
+    top: 55%;
+}
+  /* 分別調整 :before 和 :after 的位置 */
+.title h1:before{
+    left: -350px;
+  }
+.title h1:after{
+    right: -350px;
+}
+
+/* ------------------ card 卡片區 ------------------ */
+
+.card{
+    /* ------ 圖片置中 ------ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin: 20px 0;
+}
+
+.card img{
+    width: 500px;
+    height: 300px;
+}
+
+.card .cardText{
+    /* border: 1px solid black; */
+    width: 600px;
+    text-align: center;
+}
+.card h1{
+    font-size: 40px;
+}
+.card h2{
+    font-size: 32px;
+}
+.card p{
+    font-size: 16px;
+    margin-top: 12px;
+    line-height: 1.6;
+}
+.card ul{
+    /* border: 1px solid black; */
+    display: inline-block;
+    text-align: left;
+}
+.card ul li{
+    font-size: 16px;
+}
+
+.card .new_img{
+height: auto;
+clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 85%, 25% 100%, 30% 85%, 0% 85%);
+}
+
+
+.topButton{
+    width: 1200px;
+    margin: 0 auto;
+}
+.topButton a{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* .iconFooter{
+
+} */
+
+/* ------------------ footer ------------------ */
+
+
+footer{
+    background-color: #E08E58;
+    padding: 24px 0;
+    
+    color: #ffffff;
+}
+footer .contentFooter{
+    width: 950px;
+    
+    display: flex; /* flexbox */
+    justify-content: space-between; /* 兩邊對齊 */
+    align-items: center; /* 垂直居中 */
+
+    margin: 0 auto;
+    /* padding-right: 10px; */
+}
+
+.infoFooter p{   
+    padding-bottom: 20px;
+}
+
+.footerLogo img{
+    width: 150px;
+}
+.fb_footer img{
+    width: 45px;
+}
+.infoFooter li{
+    font-size: 16px;
+}
+.infoFooter ul li a , .infoFooter a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.copyright{
+    color: #ffffff;
+    text-align: center;
+    margin: 5px 0;
+}

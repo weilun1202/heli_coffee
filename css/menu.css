@@ -1,0 +1,61 @@
+ /* ------------------- ----- -------------------  */
+ /* ------------------- menu -------------------  */
+ /* ------------------- ----- -------------------  */
+
+
+ /* ----- 選擇 menu 種類 ----- */
+
+.menuChoose{
+    margin: 0 auto;
+    font-size: 32px;
+    /* background-color: #fff;     */
+}
+.menuChoose ul{
+    display: flex;
+    
+    /* 集中在中央 */
+    justify-content: center;
+}
+.menuChoose ul li{
+    padding: 16px;
+    transition: all 1s;
+    margin: 10px;
+}
+
+.menuChoose ul li:hover{
+    transform: translate(0,-10px);
+    border-radius: 16px;
+    color: #ADD0B3;
+    background-color: #E08E58;
+}
+
+ /* -----  ----- */
+
+.mainMenu{
+    display: flex;
+
+    /* 大圖置中 */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+    
+}
+
+.mainMenuList{
+    display: flex;
+
+    flex-direction: column; 
+    /* 讓卡片垂直排列 */
+
+    /* 圖卡與圖卡上下之間的間距 */
+    gap: 20px;
+}
+
+.mainMenuList img{
+    transition: all 1s;
+}
+
+.mainMenuList img:hover{
+    transform: scale(1.1);
+}
