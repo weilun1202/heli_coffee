@@ -46,7 +46,6 @@ body{
     list-style: none; /* 移除預設的點 */
 }
 
-  
 .topMain li{
     float: left;
     line-height: 80px;
@@ -76,51 +75,73 @@ body{
     background-size: cover;
     background-position: center bottom;
 
-    width: 1240px;
+    max-width: 1240px;
     height: 550px;
     margin: 0 auto;
-
-    position: relative;
 }
   
 .bannerMain{
-    position: absolute;
+    width: 1200px;
+    height: 550px;
 
-    /* 文字定位 */
-    top: 70%;
-    left: 15%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #ffffff;
-
-    /* 文字動畫 */
-    opacity: 0; /* 初始為隱藏 */
-    animation: fadeIn 1s ease-out forwards; /* 2秒慢慢出現 */
+    position: relative;
 }
   
 .bannerMain h1{
     color: #ffffff;
     font-size: 40px;
-    margin-bottom: 10px;
+    position: absolute;
+
+    animation: fade 1s linear 0s ;
+
+    left: 80px;
+    bottom: 200px;
 }
-  
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .bannerMain h2{
     color: #ffffff;
     font-size: 32px;
+    position: absolute;
+
+    animation: fade 1s linear 0s ;
+
+    left: 80px;
+    bottom: 160px;
+
 }
-.bannerMain p{
-    font-size: 24px;
-    color: #ffffff;
-}
-/* ------------------ 文字動畫 ------------------ */
-@keyframes fadeIn{
-    from {
+@keyframes fade {
+    0% {
         opacity: 0;
-        transform: translate(-50%, -60%);
     }
-    to {
+    100% {
         opacity: 1;
-        transform: translate(-50%, -50%);
+    }
+}
+
+.bannerMain p{
+    color: #ffffff;
+    font-size: 16px;
+    position: absolute;
+
+    animation: fade 1s linear 0s ;
+
+    left: 80px;
+    bottom: 100px;
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
@@ -129,24 +150,20 @@ body{
     display: flex;
     padding: 30px 20px;
 }
-
 .swiper li{
     width: 300px;
     margin: 0 10px;
 }
-
 .swiper li img{
     display: block;
 }
 .swiper{
     display: flex;
 }
-
 .swiper img{
     width: 300px;
     height: 300px;
 }
-
 main{
     margin-bottom: 20px;
 }
@@ -161,7 +178,6 @@ main{
     display: inline-block;
     font-size: 40px;
 }
-
 .title h1:before, .title h1:after{
     content: "";
     position: absolute;
@@ -225,7 +241,6 @@ height: auto;
 clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 85%, 25% 100%, 30% 85%, 0% 85%);
 }
 
-
 .topButton{
     width: 1200px;
     margin: 0 auto;
@@ -238,12 +253,7 @@ clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 85%, 25% 100%, 30% 85%, 0% 85%)
     text-align: center;
 }
 
-/* .iconFooter{
-
-} */
-
 /* ------------------ footer ------------------ */
-
 
 footer{
     background-color: #E08E58;
@@ -259,7 +269,6 @@ footer .contentFooter{
     align-items: center; /* 垂直居中 */
 
     margin: 0 auto;
-    /* padding-right: 10px; */
 }
 
 .infoFooter p{   
