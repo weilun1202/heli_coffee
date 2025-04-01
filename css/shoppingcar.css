@@ -19,7 +19,7 @@
 }
 .car_control div{
     width: 200px;
-    color: #464545;
+    color: #362e26;
     line-height: 30px;
 }
 .car_control .itemName{
@@ -50,7 +50,6 @@
     justify-content: center;
     align-items: center;
 }
-
 .bookingEnter{
     width: 50%;
     text-align: center;
@@ -77,7 +76,6 @@
 }
 
 /* 訂購規則 */
-
 .bookingRule{
     width: 50%;
     padding-left: 70px;
@@ -94,7 +92,6 @@
 }
 
 /* 結帳 */
-
 .checkout button{
     padding: 5px 30px;
     letter-spacing: 5px;
@@ -112,9 +109,9 @@
 .beforePage a{
     text-decoration: none;
     font-size: 24px;
-    color: #464545;
-    background-color: #f0f0f0;
-    border: 1px solid #464545;
+    color: #362e26;
+    background-color: #ffffff;
+    border: 1px solid #362e26;
     border-radius: 8px;
     padding: 0 20px;
 }

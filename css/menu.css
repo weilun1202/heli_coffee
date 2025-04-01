@@ -25,7 +25,7 @@
 .menuChoose ul li:hover{
     transform: translate(0,-10px);
     border-radius: 16px;
-    color: #ADD0B3;
+    color: #ffffff;
     background-color: #E08E58;
 }
 

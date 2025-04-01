@@ -25,6 +25,7 @@
     align-items: center;
     text-align: center;
     
+    
     /* 卡片內之間的間距 */
     gap: 20px;
 
@@ -34,6 +35,10 @@
 .cardAbout img{
     width: 400px;
     height: auto;
+}
+.aboutBorder{
+    border: 8px solid #E08E58;
+    border-style: solid double;
 }
 
 .cardAbout .cardText{

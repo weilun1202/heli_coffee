@@ -63,7 +63,7 @@ body{
 }
   
 .topMain li a:hover{
-    color: white;
+    color: #ffffff;
     transform: scale(1.2); /* 用 scale() 來放大 */
     transition: transform 1s, color 1s; /* 加入 transform 的過渡效果 */
 }
@@ -91,7 +91,7 @@ body{
     left: 15%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
+    color: #ffffff;
 
     /* 文字動畫 */
     opacity: 0; /* 初始為隱藏 */
@@ -99,18 +99,18 @@ body{
 }
   
 .bannerMain h1{
-    color: aliceblue;
+    color: #ffffff;
     font-size: 40px;
     margin-bottom: 10px;
 }
   
 .bannerMain h2{
-    color: aliceblue;
+    color: #ffffff;
     font-size: 32px;
 }
 .bannerMain p{
     font-size: 24px;
-    color: aliceblue;
+    color: #ffffff;
 }
 /* ------------------ 文字動畫 ------------------ */
 @keyframes fadeIn{
@@ -131,14 +131,12 @@ body{
 }
 
 .swiper li{
-    outline: 1px solid #ccc;
     width: 300px;
     margin: 0 10px;
 }
 
 .swiper li img{
     display: block;
-    /* width: 100%; */
 }
 .swiper{
     display: flex;

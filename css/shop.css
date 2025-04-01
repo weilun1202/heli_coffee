@@ -46,7 +46,6 @@
 }
 
 .shopMain li{
-    
     background-color: #fff;
     padding: 10px;
     box-sizing: border-box;
@@ -60,10 +59,7 @@
 
     /* 按鈕靠右 */
     position: relative;
-
-
 }
-
 
 .quantity{
     font-size: 16px;
@@ -74,7 +70,6 @@
 
 
 .shopMain_button{
-    
     text-align: right;
 }
 
@@ -102,9 +97,9 @@
 .goToCar a{
     text-decoration: none;
     font-size: 24px;
-    color: #464545;
+    color: #000000;
     background-color: #f0f0f0;
-    border: 1px solid #464545;
+    border: 1px solid #000000;
     border-radius: 8px;
     padding: 0 20px;
 }
