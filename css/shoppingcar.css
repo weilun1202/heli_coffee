@@ -8,7 +8,7 @@
     width: 1000px;
     margin: 0 auto;
     height: 30px;
-    background-color: rgb(217, 204, 204);
+    background-color: #faebd7;
     border-radius: 4px;
     padding-left: 10px;
     
@@ -40,11 +40,11 @@
 .bookingInfo{
     width: 1000px;
     margin: 0 auto;
-    background-color: antiquewhite;
-
-    border: 1px solid #464545;
+    background-color: #faebd7;
+    
     border-radius: 8px;
-
+    padding: 20px 0;
+    
     display: flex;
     
     justify-content: center;
@@ -52,7 +52,7 @@
 }
 
 .bookingEnter{
-    width: 500px;
+    width: 50%;
     text-align: center;
 }
 .bookingItem{
@@ -64,25 +64,34 @@
 
 .booking,
 .bookingAdress{
+    /* 表單內容與外框 */
+    color: black;
     width: 400px;
-    margin: 5px 0;
-    padding: 10px;
-    
-    font-size: 16px;
-    
-    border-radius: 8px;
+    font-size: 20px;
+    padding: 8px 0;
+    border: 0px;
+
+    border-radius: 16px;
+
+    text-align: center;
 }
 
 /* 訂購規則 */
 
 .bookingRule{
-    width: 500px;
-    margin-left: 80px;    
+    width: 50%;
+    padding-left: 70px;
 }
 .bookingRule h2{
     font-size: 32px;
 }
-
+.adressStreet{
+    border: 0px;
+    
+    border-radius: 16px;
+    
+    text-align: center;
+}
 
 /* 結帳 */
 
