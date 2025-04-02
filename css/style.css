@@ -92,12 +92,12 @@ body{
     font-size: 40px;
     position: absolute;
 
-    animation: fade 1s linear 0s ;
+    animation: bnerT 1s linear 0s ;
 
     left: 80px;
     bottom: 200px;
 }
-@keyframes fade {
+@keyframes bnerT {
     0% {
         opacity: 0;
     }
@@ -111,7 +111,7 @@ body{
     font-size: 32px;
     position: absolute;
 
-    animation: bnerT 1s linear 0s ;
+    animation: bnerT 2.5s linear 0s ;
 
     left: 80px;
     bottom: 160px;
@@ -131,12 +131,12 @@ body{
     font-size: 16px;
     position: absolute;
 
-    animation: fade 1s linear 0s ;
+    animation: bnerT 3s linear 0s ;
 
     left: 80px;
     bottom: 100px;
 }
-@keyframes fade {
+@keyframes bnerT {
     0% {
         opacity: 0;
     }
