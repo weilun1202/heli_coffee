@@ -39,6 +39,7 @@
 .aboutBorder{
     border: 8px solid #E08E58;
     border-style: solid double;
+    border-radius: 8px;
 }
 
 .cardAbout .cardText{

@@ -10,9 +10,8 @@ html{
 }
 
 body{
-    font-family: "Zen Kaku Gothic Antique", sans-serif;;
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
     line-height: 1.6;
-    /* background-color: #f8e2d3; */
 }
   
 .top{
@@ -23,7 +22,7 @@ body{
   
 .topMain{
     width: 1200px;
-    height: 80px;
+    height: 60px;
     margin: 0 auto;
 
     display: flex; /* flexbox */
@@ -32,8 +31,7 @@ body{
 }
   
 .topMain img{
-    height: 60px;
-    
+    height: 40px;
     transition: all 1s linear;
 }
 .topMain img:hover {
@@ -89,21 +87,13 @@ body{
   
 .bannerMain h1{
     color: #ffffff;
-    font-size: 40px;
+    font-size: 48px;
     position: absolute;
 
-    animation: bnerT 1s linear 0s ;
+    animation: bannerTitle 1s linear 0s ;
 
     left: 80px;
     bottom: 200px;
-}
-@keyframes bnerT {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 
 .bannerMain h2{
@@ -111,19 +101,11 @@ body{
     font-size: 32px;
     position: absolute;
 
-    animation: bnerT 2.5s linear 0s ;
+    animation: bannerTitle 2.5s linear 0s ;
 
     left: 80px;
     bottom: 160px;
 
-}
-@keyframes bnerT {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 
 .bannerMain p{
@@ -131,12 +113,12 @@ body{
     font-size: 16px;
     position: absolute;
 
-    animation: bnerT 3s linear 0s ;
+    animation: bannerTitle 4s linear 0s ;
 
     left: 80px;
     bottom: 100px;
 }
-@keyframes bnerT {
+@keyframes bannerTitle {
     0% {
         opacity: 0;
     }
@@ -146,6 +128,9 @@ body{
 }
 
 /* ------------------ swiper ------------------ */
+.swiper{
+    overflow: hidden;
+}
 .swiper ul{
     display: flex;
     padding: 30px 20px;
@@ -162,7 +147,7 @@ body{
 }
 .swiper img{
     width: 300px;
-    height: 300px;
+    height: 240px;
 }
 main{
     margin-bottom: 20px;
@@ -173,12 +158,12 @@ main{
 .title{
     text-align: center;
 }
-.title h1{
+.title h2{
     position: relative;
     display: inline-block;
-    font-size: 40px;
+    font-size: 32px;
 }
-.title h1:before, .title h1:after{
+.title h2:before, .title h2:after{
     content: "";
     position: absolute;
     height: 2px;
@@ -186,72 +171,125 @@ main{
     width: 300px;
     top: 55%;
 }
-  /* 分別調整 :before 和 :after 的位置 */
-.title h1:before{
+/* 分別調整 :before 和 :after 的位置 */
+.title h2:before{
     left: -350px;
   }
-.title h1:after{
+.title h2:after{
     right: -350px;
 }
 
 /* ------------------ card 卡片區 ------------------ */
 
-.card{
-    /* ------ 圖片置中 ------ */
+.cardArea{
     display: flex;
+    /* ------ 圖片置中 ------ */
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+.card{
+    width: 300px;
+    padding: 10px;
+    
+    box-sizing: border-box;
+	overflow: hidden;
+	position: relative;
+	top: 0;
 
-    margin: 20px 0;
+    transition-property: all;
+    transition-duration: .5s;
 }
-
-.card img{
-    width: 500px;
-    height: 300px;
-}
-
-.card .cardText{
-    /* border: 1px solid black; */
-    width: 600px;
-    text-align: center;
-}
-.card h1{
-    font-size: 40px;
-}
-.card h2{
-    font-size: 32px;
-}
-.card p{
-    font-size: 16px;
-    margin-top: 12px;
-    line-height: 1.6;
-}
-.card ul{
-    /* border: 1px solid black; */
-    display: inline-block;
+.cardText{
     text-align: left;
 }
-.card ul li{
+
+.cardText .cardCost{
+    /* 符號在 li 範圍內 */
+    list-style-type: '★ ';
+    list-style-position: inside;
+}
+.cardText h2{
+    font-size: 32px;
+}
+.cardText h3{
+    font-size: 24px;
+}
+.cardText p{
     font-size: 16px;
 }
-
-.card .new_img{
-height: auto;
-clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 85%, 25% 100%, 30% 85%, 0% 85%);
+.card img{
+    width: 280px;
+    height: 200px;
 }
 
-.topButton{
-    width: 1200px;
+/* ----------- 卡片動畫 ----------- */
+.card:hover{
+    outline: 2px solid #E08E58;
+    border-radius: 16px;
+
+	top: -15px;
+    box-shadow: 0 5px 2px rgba(0,0,0,.1);
+}
+
+
+/* ------------------ newsArea ------------------ */
+
+.newsArea{
+    width: 600px;
     margin: 0 auto;
 }
-.topButton a{
-    margin: 20px;
+.news{
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    border: 1px solid #E08E58;
+    border-radius: 8px 20px;
+
+    /* transition-property: all;
+    transition-duration: .5s; */
+    transition: transform 1s, color 1s;
+    
+    margin: 10px;
 }
+.newsArea .cardText{
+    padding: 10px;
+}
+.newsArea img{
+    width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+}
+.news:hover{
+    background-image: url(../img/bgi-02-unsplash.jpg);
+    
+}
+
+
+
+/* ------------------ topButton (浮動 Go Top) ------------------ */
+
+.topButton{
+    
+    position: fixed;
+    right: 50px;
+    bottom: 280px;
+    font-size: 40px;
+}
+.topButton i{
+    color: #E08E58;
+    border: 2px solid #E08E58;
+    border-radius: 50%;
+
+    transition: all 1s linear;    
+}
+.topButton i:hover{
+    transform: scale(1.2); /* 用 scale() 來放大 */
+    transition: transform 1s, color 1s linear;
+}
+
 
 /* ------------------ footer ------------------ */
 
@@ -270,11 +308,12 @@ footer .contentFooter{
 
     margin: 0 auto;
 }
-
 .infoFooter p{   
     padding-bottom: 16px;
 }
-
+.iconFooter i{
+    font-size: 30px;
+}
 .footerLogo img{
     width: 150px;
 }
@@ -288,7 +327,6 @@ footer .contentFooter{
     color: #ffffff;
     text-decoration: none;
 }
-
 .copyright{
     color: #ffffff;
     text-align: center;

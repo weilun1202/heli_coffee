@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Icon -->
-    <link rel="icon" href="./img/link_icon_mug-saucer-solid.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -35,11 +35,15 @@
                 <li><a href="menu.html">餐點介紹</a></li>
                 <li><a href="shop.html">選購商品</a></li>
                 <li><a href="yoyaku.html">客席訂位</a></li>
+                <li>
+                    <a href="shoppingcar.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+                <!-- <li><i class="fa-solid fa-bars"></i></li> -->
             </ul>
 
         </div>
     </div>
-
+    
     <!-- banner -->
     <div class="banner">
         <div class="bannerMain">
@@ -55,70 +59,118 @@
         <!-- swiper -->
         <div class="swiper">
             <ul>
-                <li class="swiper1"><img src="img/swiper_01.jpg" alt=""></li>
-                <li class="swiper2"><img src="img/swiper_02.jpg" alt=""></li>
-                <li class="swiper3"><img src="img/swiper_03.jpg" alt=""></li>
-                <li class="swiper4"><img src="img/swiper_04.jpg" alt=""></li>
-                <li class="swiper5"><img src="img/swiper_05.jpg" alt=""></li>
+                <li class="swiper1"><img src="img/swiper_01_pexels.jpg" alt=""></li>
+                <li class="swiper2"><img src="img/swiper_02_pexels.jpg" alt=""></li>
+                <li class="swiper3"><img src="img/swiper_03_pexels.jpg" alt=""></li>
+                <li class="swiper4"><img src="img/swiper_04_pexels.jpg" alt=""></li>
+                <li class="swiper5"><img src="img/swiper_05_pexels.jpg" alt=""></li>
             </ul>
         </div>
 
-        <!-- limited_time -->
+        <!-- 期間限定 標題 -->
         <div class="title">
-            <h1>期間限定(2025.04)</h1>
+            <h2>期間限定(2025.04)</h2>
         </div>
 
-        <section class="card">
-
-            <img src="img/MEXICO.png" alt="mexico">
-
-            <div class="cardText">
-                <h1>墨西哥<br />皮娜塔 SHG 水洗</h1>
-                <h2>堅果巧克力香氣，黑糖甜韻，<br>尾韻圓潤厚實</h2>
-                <ul>
-                    <li>熱手沖 $ 120</li>
-                    <li>冰手沖 $ 130</li>
-                    <li>熱手沖藍蕾 $ 180</li>
-                    <li>冰手沖藍蕾 $ 190</li>
-                    <li>半磅 $ 380</li>
-                </ul>
+        <!-- 卡片區 -->
+        <section class="cardArea">
+            <div class="card">
+                <img src="./img/Flag mexico.png" alt="">
+                <div class="cardText">
+                    <h2>墨西哥皮娜塔 SHG 水洗</h2>
+                    <h3>堅果巧克力香氣，黑糖甜韻，尾韻圓潤厚實</h3>
+                    <ul class="cardCost">
+                        <li>熱手沖 $ 120</li>
+                        <li>冰手沖 $ 130</li>
+                        <li>熱手沖藍蕾 $ 180</li>
+                        <li>冰手沖藍蕾 $ 190</li>
+                        <li>半磅 $ 380</li>
+                    </ul>
+                </div>
             </div>
+
+            <div class="card">
+                <img src="./img/Flag Costa_Rica.svg" alt="">
+                <div class="cardText">
+                    <h2>哥斯大黎加 塔拉珠 牧羊人 SHB 水洗</h2>
+                    <h3>柑橘與白色花香，入口巧克力香氣，黑糖甜韻</h3>
+                    <ul class="cardCost">
+                        <li>熱手沖 $ 120</li>
+                        <li>冰手沖 $ 130</li>
+                        <li>熱手沖藍蕾 $ 180</li>
+                        <li>冰手沖藍蕾 $ 190</li>
+                        <li>半磅 $ 380</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./img/Flag Ethiopia.svg" alt="">
+                <div class="cardText">
+                    <h2>衣索比亞 西阿爾希區 娜莎豹 G1 日曬</h2>
+                    <h3>莓果香氣，熟果甜，口感圓潤</h3>
+                    <ul class="cardCost">
+                        <li>熱手沖 $ 120</li>
+                        <li>冰手沖 $ 130</li>
+                        <li>熱手沖藍蕾 $ 180</li>
+                        <li>冰手沖藍蕾 $ 190</li>
+                        <li>半磅 $ 380</li>
+                    </ul>
+                </div>
+            </div>
+            
         </section>
 
-        <!-- info -->
+        <!-- 最新消息 標題 -->
         <div class="title">
-            <h1>最新消息</h1>
+            <h2>最新消息</h2>
         </div>
 
-        <section class="card">
+        <div class="newsArea">
+            <section class="news">
+                <img src="img/news01.jpg" alt="">
+                <div class="cardText">
+                    <h3>店休公告 (3/28)</h3>
+                    <p>
+                        各位河狸朋友好<br>
+                        我們今天3/28(五)店休一日<br>
+                        週末正常營業！<br>
+                        店休期間一樣有接咖啡熟豆和手作甜點訂單<br>
+                        有需要的朋友可以直接來電下訂哦！<br>
+                        謝謝大家！
+                    </p>
+                </div>
+            </section>
 
-            <div class="cardText">
-                <h2>店休公告</h2>
-                <p>
-                    各位河狸朋友好<br>
-                    我們今天3/28(五)店休一日<br>
-                    週末正常營業！<br>
-                    店休期間一樣有接咖啡熟豆和手作甜點訂單<br>
-                    有需要的朋友可以直接來電或私訊粉專下訂哦！<br>
-                    謝謝大家！
-                </p>
-            </div>
+            <section class="news">
+                <img src="img/news02.jpg" alt="">
+                <div class="cardText">
+                    <h3>店休公告 (3/19)</h3>
+                    <p>
+                        各位河狸朋友好<br>
+                        3/19(三)～3/20(四)店休兩日<br>
+                        週末正常營業！<br>
+                        星期五會到慈大出攤，建林街店面將再休一日<br>
+                        有需要的朋友可以直接來電下訂哦！<br>
+                        謝謝大家！
+                    </p>
+                </div>
+            </section>
 
-            <img src="img/new.jpg" alt="mexico" class="new_img">
+        </div>
 
-        </section>
-
-
+        <!-- 浮動 Go Top -->
         <div class="topButton">
-            <a href="#top"><img src="./img/top.png" alt=""></a>
+            <a href="#top"><i class="fa-solid fa-chevron-up"></i></a>
         </div>
+        
         
     </main>
 
     <footer>
         <div class="contentFooter">
             <div class="infoFooter">
-
+                <!-- Logo -->
                 <a href="index.html" class="footerLogo">
                     <img src="./img/logo_white.svg" alt="">
                 </a><br>
@@ -127,9 +179,11 @@
                 </a>
                 
                 <div class="iconFooter">
-                    <a href="https://www.facebook.com/HeliCoffee.Taiwan" class="fb_footer">
-                        <img src="./img/facebook-square-brands.svg" alt="">
+
+                    <a href="https://www.facebook.com/HeliCoffee.Taiwan" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
                     </a>
+                    <!-- <i class="fa-brands fa-instagram"></i> -->
                 </div>
 
                 <ul>
