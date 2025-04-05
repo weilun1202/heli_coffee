@@ -1,11 +1,3 @@
-.needBgi{
-    background-image: url(../img/bgi\ freepik.jpg);
-    background-size: cover;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
 .shopMain{
     display: flex;
 
@@ -20,30 +12,6 @@
     max-width: 1200px; 
     /* 增加內邊距 */
     padding: 20px; 
-}
-.shopMain h3{
-    font-size: 24px;
-}
-
-/* 數量按鈕 */
-.shopMain .conut{
-    display: flex;
-}
-.shopMain .conut p{
-    margin: 0 10px;
-}
-
-.shopMain img{
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    border-radius: 16px;
-    transition: all 1s linear;
-}
-
-.shopMain img:hover{
-    transform: scale(1.1); /* 用 scale() 來放大 */
-    transition: transform 1s, color 1s;
 }
 
 .shopMain ul{
@@ -72,6 +40,33 @@
     border: 1px solid black;
 }
 
+/* ------ 圖片 ------ */
+.shopMain img{
+    display: block;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: 16px;
+    transition: all 1s linear;
+}
+.shopMain img:hover{
+    transform: scale(1.1); /* 用 scale() 來放大 */
+    transition: transform 1s, color 1s;
+}
+
+.shopMain h3{
+    font-size: 24px;
+}
+
+/* ------ 數量按鈕 ------ */
+.shopMain .conut{
+    display: flex;
+}
+.shopMain .conut p{
+    margin: 0 10px;
+}
+
+/* ------ 豆種選擇 ------ */
 .quantity{
     font-size: 16px;
     padding: 0 5px;
@@ -79,7 +74,7 @@
     border-radius: 8px;
 }
 
-
+/* ------ 加入購物車 ------ */
 .shopMain_button{
     text-align: right;
 }
@@ -92,14 +87,25 @@
 
     border-radius: 8px;
 
-    position: relative;
-    left: 180px;
+    /* position: relative; */
+    left: 50px;
     bottom: 5px;
 }
 
-.goToCar{
-    width: 800px;
+/* ------ 訂購規則 ------ */
+
+.needBgi{
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
+}
+
+/* ------ 前往購物車 ------ */
+
+.goToCar{
+    width: 1000px;
+    margin: 0 auto;
+
     padding: 10px;
     display: block;
     text-align: right;

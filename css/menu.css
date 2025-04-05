@@ -20,6 +20,7 @@
     padding: 16px;
     transition: all 1s;
     margin: 10px;
+    font-size: 24px;
 }
 
 .menuChoose ul li:hover{
@@ -29,33 +30,73 @@
     background-color: #E08E58;
 }
 
- /* -----  ----- */
+ /* ----- 國家名 ----- */
 
-.mainMenu{
-    display: flex;
+ .nation{
+    font-size: 24px;
 
-    /* 大圖置中 */
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 32px;
-    
-}
+ }
 
-.mainMenuList{
+/* ----- 咖啡豆 ----- */
+
+.nationCardArea{
     display: flex;
+    flex-wrap: wrap;              /* 允許自動換行 */
+    width: 620px;            /* 限制寬度 */
+    margin: 0 auto;               /* 區塊置中 */
+    justify-content: flex-start;  /* 卡片靠左排列 */
 
-    flex-direction: column; 
-    /* 讓卡片垂直排列 */
+    gap: 20px; /* 圖卡間距 */
 
-    /* 圖卡與圖卡上下之間的間距 */
-    gap: 20px;
+    padding-bottom: 20px;
 }
 
-.mainMenuList img{
-    transition: all 1s;
+.nationCard{
+    position: relative;
+
+    width: 300px;
+    overflow: hidden;
+    color: #ffffff;
+
+    cursor: pointer;
 }
 
-.mainMenuList img:hover{
-    transform: scale(1.1);
+.nationCard img {
+    display: block;
+    border-radius: 8px;
+
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.nationCard p {
+    position: absolute;
+
+    text-align: center;
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 16px 0;
+    background-color: #E08E58; /* 半透明背景 */
+    color: white;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.nationCard a{
+    text-decoration: none;
+}
+
+.nationCard:hover p {
+    opacity: 1;
+}
+
+.nationCard:hover img {
+    transform: scale(1.05);
 }

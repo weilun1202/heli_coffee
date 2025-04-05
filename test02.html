@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .nationCardArea{
+            display: flex;
+
+            /* 大圖置中 */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 32px;
+            margin: 0 auto;
+
+            /* 最大寬度，內容居中 */
+            max-width: 1200px; 
+            /* 增加內邊距 */
+            padding: 20px; 
+        }
+        .nationCardArea ul{
+            display: flex;
+            flex-wrap: wrap;
+            
+            width: 980px;
+            /* justify-content: space-between;  */
+            gap: 24px; /* 卡片之間的間距 */
+        }
+        .nationCardArea li{
+            background-color: #fff;
+            padding: 10px;
+            box-sizing: border-box;
+            margin: 0 5px 10px;
+            border-radius: 8px;
+            
+            text-align: left;
+
+            flex-basis: 300px;
+            /* flex-grow: 1; */
+
+            /* 按鈕靠右 */
+            position: relative;
+            border: 1px solid black;
+        }
+        .nationCardArea img{
+            display: block;
+            width: 100%;
+            height: 200px;
+            margin-bottom: 10px;
+            border-radius: 16px;
+            transition: all 1s linear;
+        }
+        
+
+
+    </style>
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="menuArea">
+
+        <!-- ----- 國家名：瓜地馬拉 ----- -->
+
+        <div class="nation">
+            <h3>瓜地馬拉</h3>
+        </div>
+
+        <!-- ----- 咖啡豆：瓜地馬拉 ----- -->
+
+        <div class="nationCardArea">
+            <ul>
+                <li>
+                    <img src="img/menu_01_pexels.jpg" alt="">
+                    <p>
+                        <a href="">新東方 向日葵咖啡 SHB 日曬 波旁</a>
+                    </p>
+                </li>
+
+                <li>
+                    <img src="img/menu_02_pexels.jpg" alt="">
+                    <p>
+                        <a href="">法漢尼斯 弩雲咖啡</a>
+                    </p>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <img src="img/menu_03_pexels.jpg" alt="">
+                    <p>
+                        <a href="">法漢尼斯 弩雲咖啡</a>
+                    </p>
+                </li>
+            </ul>
+
+            <!-- <ul>
+                <li>
+                    <img src="img/menu_04_pexels.jpg" alt="">
+                    <p>
+                        <a href="">法漢尼斯 弩雲咖啡</a>
+                    </p>
+                </li>
+            </ul> -->
+        </div>
+</body>
+</html>

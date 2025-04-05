@@ -65,6 +65,11 @@ body{
     transition: transform 1s, color 1s; /* 加入 transform 的過渡效果 */
 }
 
+/* 所在位置 */
+.nowPlace{
+    font-weight: bold;
+}
+
 
 /* ------------------ banner ------------------ */
 
@@ -105,7 +110,6 @@ body{
 
     left: 80px;
     bottom: 160px;
-
 }
 
 .bannerMain p{
@@ -246,13 +250,13 @@ main{
     text-align: center;
 
     border: 1px solid #E08E58;
-    border-radius: 8px 20px;
+    border-radius: 16px;
 
     /* transition-property: all;
     transition-duration: .5s; */
     transition: transform 1s, color 1s;
     
-    margin: 10px;
+    margin: 20px;
 }
 .newsArea .cardText{
     padding: 10px;
@@ -260,7 +264,7 @@ main{
 .newsArea img{
     width: 300px;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 16px;
 }
 .news:hover{
     background-image: url(../img/bgi-02-unsplash.jpg);
@@ -271,21 +275,32 @@ main{
 
 /* ------------------ topButton (浮動 Go Top) ------------------ */
 
-.topButton{
-    
+.sideButton1,
+.sideButton2{
+    color: #E08E58;
     position: fixed;
-    right: 50px;
-    bottom: 280px;
-    font-size: 40px;
+    font-size: 32px;
+
+    transition: all 1s linear;  
 }
-.topButton i{
+.sideButton1{
+    right: 50px;
+    bottom: 280px; 
+}
+.sideButton2{
+    right: 50px;
+    bottom: 330px;
+}
+.sideButton1 i{
     color: #E08E58;
     border: 2px solid #E08E58;
     border-radius: 50%;
-
-    transition: all 1s linear;    
 }
-.topButton i:hover{
+.sideButton2 i{
+    color: #E08E58;
+}
+.sideButton1 i:hover,
+.sideButton2 i:hover{
     transform: scale(1.2); /* 用 scale() 來放大 */
     transition: transform 1s, color 1s linear;
 }
