@@ -1,3 +1,6 @@
+/* ------------------- ----------- -------------------  */
+/* ------------------- shoppingCar -------------------  */
+/* ------------------- ----------- -------------------  */
 
 .shoppingCar{
     width: 1000px;
@@ -61,19 +64,19 @@
     font-size: 32px;
 }
 
-.booking,
-.bookingAdress{
+.booking{
     /* 表單內容與外框 */
     color: black;
     width: 400px;
-    font-size: 20px;
-    padding: 8px 0;
+    font-size: 16px;
+    padding: 10px;
     border: 0px;
 
     border-radius: 16px;
 
-    text-align: center;
+    text-align: left;
 }
+
 
 /* 訂購規則 */
 .bookingRule{
@@ -101,17 +104,24 @@
 .beforePage{
     width: 1000px;
     margin: 0 auto;
-    padding: 10px;
+
     display: block;
     text-align: right;
+    padding: 20px;
     margin-top: 20px;
 }
 .beforePage a{
-    text-decoration: none;
-    font-size: 24px;
-    color: #362e26;
-    background-color: #ffffff;
-    border: 1px solid #362e26;
-    border-radius: 8px;
+    line-height: 1.6;
+    border: 1px solid black;
     padding: 0 20px;
+    align-self:flex-end;
+    
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    color: black;
+}
+.beforePage a:hover{
+    background-color: #ccc;
+    color: #ffffff;
 }

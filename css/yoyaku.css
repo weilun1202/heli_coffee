@@ -1,12 +1,14 @@
+/* ------------------- ------ -------------------  */
+/* ------------------- yoyaku -------------------  */
+/* ------------------- ------ -------------------  */
+
 .yoyakuInfo{
-    
-    background-image: url(../img/bgi.png);
     height: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #f3c7a9;
 
     display: flex;
     margin: 0 auto;
+    padding-top: 10px;
 
     display: flex; /* flexbox */
     justify-content: center; /* 兩邊對齊 */
@@ -19,50 +21,42 @@
 .yoyakuForm{
     width: 600px;
 }
-.yoyakuForm h3{
-    font-size: 24px;
+.yoyakuForm p{
+    font-size: 16px;
     text-align: center;
-    margin: 20px;
+    margin: 10px;
 }
 
 .yoyakuFormContent{
     width: 100%;
-    margin-top: 20px;
+    margin: 0 auto;
+    /* margin-top: 20px; */
 }
-
-.formGruop{
-    /* 表單格之間的間距 */
+.gruop1{
     margin: 0 10px 20px;
-    text-align: center;
-}
-
-.gruop{
-    /* 表單內容與外框 */
-    color: black;
-    width: 90%;
-    font-size: 20px;
-    padding: 8px 0;
-    border: 0px;
+    width: 550px;
 
     border-radius: 16px;
-    padding-right: 10px;
+    border: 0px;
+    padding: 10px;
+}
+.gruop2{
+    margin: 0 10px 20px;
+    width: 550px;
+
+    border-radius: 16px;
+    border: 0px;
+    padding: 10px;
 
     text-align: center;
 }
-
-
-/* 備註 */
 .message{
-    color: black;
-    width: 90%;
-    height: 150px;
-    font-size: 20px;
-    padding: 20px 0;
-    border-radius: 30px;
-    text-align: center;
-}
-textarea::placeholder{
-    text-align: center;
+    margin: 0 10px 20px;
+    width: 550px;
+
+    border-radius: 16px;
+    border: 0px;
+    padding: 10px;
 }
 
 .btn{

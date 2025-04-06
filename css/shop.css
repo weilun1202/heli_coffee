@@ -1,103 +1,85 @@
-.shopMain{
+ /* ------------------- ----- -------------------  */
+ /* ------------------- shop -------------------  */
+ /* ------------------- ----- -------------------  */
+
+ 
+ .shopMain{
+    /* 整個區塊置中 */
+    width: 980px;
+    margin: 0 auto;
     display: flex;
 
-    /* 大圖置中 */
-    justify-content: center;
+    /* 從左邊開始排列 */
+    justify-content: flex-start;
     align-items: center;
-    text-align: center;
-    gap: 32px;
-    margin: 0 auto;
+    text-align: left;
+    gap: 24px;
+
+    flex-wrap: wrap;
 
     /* 最大寬度，內容居中 */
-    max-width: 1200px; 
+    /* max-width: 1200px;  */
     /* 增加內邊距 */
-    padding: 20px; 
+    padding: 20px;
 }
 
-.shopMain ul{
-    display: flex;
-    flex-wrap: wrap;
-    
-    width: 980px;
-    /* justify-content: space-between;  */
-    gap: 24px; /* 卡片之間的間距 */
+.shopMainCard{
+    width: 300px;
+
+    border: 1px solid #ccc;
+    border-radius: 16px;
 }
-
-.shopMain li{
-    background-color: #fff;
-    padding: 10px;
-    box-sizing: border-box;
-    margin: 0 5px 10px;
-    border-radius: 8px;
-    
-    text-align: left;
-
-    flex-basis: 300px;
-    /* flex-grow: 1; */
-
-    /* 按鈕靠右 */
-    position: relative;
-    border: 1px solid black;
-}
-
-/* ------ 圖片 ------ */
-.shopMain img{
+/* 圖片 */
+.shopMainCard .pic img{
     display: block;
+    border-radius: 16px;
+
     width: 100%;
     height: 200px;
-    margin-bottom: 10px;
-    border-radius: 16px;
-    transition: all 1s linear;
+
+    transition: transform 0.3s ease;
 }
-.shopMain img:hover{
-    transform: scale(1.1); /* 用 scale() 來放大 */
-    transition: transform 1s, color 1s;
+.shopMainCard:hover img{
+    transform: scale(1.05);
 }
 
-.shopMain h3{
-    font-size: 24px;
+.shopMainCard .txt{
+    display: flex;
+    flex-direction: column;
+
+    padding: 8px;
+    box-sizing: border-box;
 }
 
-/* ------ 數量按鈕 ------ */
-.shopMain .conut{
+/* 數量 */
+.shopMainCard .txt .count{
     display: flex;
 }
-.shopMain .conut p{
-    margin: 0 10px;
+.shopMainCard .txt .count button{
+    margin: 4px 8px;
 }
-
-/* ------ 豆種選擇 ------ */
-.quantity{
-    font-size: 16px;
-    padding: 0 5px;
-    
+/* 加入購物車 按鈕 */
+.shopMainCard .txt .btn{
+    line-height: 1.6;
+    border: 1px solid black;
+    padding: 0 15px;
+    align-self: flex-end;
+    text-decoration: none;
     border-radius: 8px;
+    margin-top: 16px;
+    color: black;
+}
+.shopMainCard .txt .btn:hover{
+    background-color: #ccc;
+    color: #ffffff;
 }
 
-/* ------ 加入購物車 ------ */
-.shopMain_button{
-    text-align: right;
-}
-
-#submit{
-    width: 100px;
-	font-size: 16px;
-
-    border: 1px solid;
-
-    border-radius: 8px;
-
-    /* position: relative; */
-    left: 50px;
-    bottom: 5px;
-}
 
 /* ------ 訂購規則 ------ */
 
 .needBgi{
-    max-width: 1200px;
+    max-width: 980px;
     margin: 0 auto;
-    padding: 20px;
 }
 
 /* ------ 前往購物車 ------ */
@@ -106,17 +88,22 @@
     width: 1000px;
     margin: 0 auto;
 
-    padding: 10px;
     display: block;
-    text-align: right;
-    margin-top: 20px;
+    text-align:right;
+    padding: 20px;
 }
 .goToCar a{
-    text-decoration: none;
-    font-size: 24px;
-    color: #000000;
-    background-color: #f0f0f0;
-    border: 1px solid #000000;
-    border-radius: 8px;
+    line-height: 1.6;
+    border: 1px solid black;
     padding: 0 20px;
+    align-self:flex-end;
+    
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    color: black;
+}
+.goToCar a:hover{
+    background-color: #ccc;
+    color: #ffffff;
 }
