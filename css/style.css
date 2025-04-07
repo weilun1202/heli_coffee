@@ -16,8 +16,13 @@ body{
   
 .top{
     background-color: #E08E58;
-    position: relative;
+    /* position: relative; */
     z-index: 10;
+
+    /* 導航列固定頂部 */
+    position: sticky;
+    top: 0;
+    width: 100%;
 }
   
 .topMain{
@@ -268,39 +273,49 @@ main{
 }
 .news:hover{
     background-image: url(../img/bgi-02-unsplash.jpg);
-    
 }
 
+/* ------------------ topButton (固定底部) ------------------ */
+
+.topButton{
+    transition: all 1s linear;
+    left: 300px;
+}
+.fa-chevron-up{
+    color: #ffffff;
+    font-size: 32px;
+    right: 50px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+}
+
+.topButton:hover{
+    transform: scale(1.2); /* 用 scale() 來放大 */
+    transition: transform 1s, color 1s linear;
+}
 
 
 /* ------------------ topButton (浮動 Go Top) ------------------ */
 
-.sideButton1,
-.sideButton2{
-    color: #E08E58;
+.sideButton1{
+    color: #ffffff;
     position: fixed;
     font-size: 32px;
 
     transition: all 1s linear;  
 }
 .sideButton1{
-    right: 50px;
-    bottom: 280px; 
+    left: 50px;
+    bottom: 50px; 
 }
-.sideButton2{
-    right: 50px;
-    bottom: 330px;
-}
+
 .sideButton1 i{
-    color: #E08E58;
-    border: 2px solid #E08E58;
+    color: #333;
+    border: 2px solid #333;
     border-radius: 50%;
 }
-.sideButton2 i{
-    color: #E08E58;
-}
-.sideButton1 i:hover,
-.sideButton2 i:hover{
+
+.sideButton1 i:hover{
     transform: scale(1.2); /* 用 scale() 來放大 */
     transition: transform 1s, color 1s linear;
 }
