@@ -45,7 +45,7 @@
 .nationCardArea{
     display: flex;
     flex-wrap: wrap;              /* 允許自動換行 */
-    width: 620px;            /* 限制寬度 */
+    width: 620px;                 /* 限制寬度 */
     margin: 0 auto;               /* 區塊置中 */
     justify-content: flex-start;  /* 卡片靠左排列 */
 
@@ -83,7 +83,7 @@
     margin: 0;
     padding: 16px 0;
     background-color: #E08E58; /* 半透明背景 */
-    color: white;
+    color: #ffffff;
     font-size: 16px;
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -91,6 +91,7 @@
 
 .nationCard a{
     text-decoration: none;
+    color: #ffffff;
 }
 
 .nationCard:hover p {

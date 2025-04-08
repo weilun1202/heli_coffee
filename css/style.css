@@ -276,49 +276,27 @@ main{
 }
 
 /* ------------------ topButton (固定底部) ------------------ */
-
-.topButton{
-    transition: all 1s linear;
-    left: 300px;
-}
 .fa-chevron-up{
-    color: #ffffff;
+    /* 位置固定 */
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000;
+    /* 外型 */
     font-size: 32px;
-    right: 50px;
-    border: 2px solid #ffffff;
+    color: #7d2727;
     border-radius: 50%;
+    border: 2px solid #7d2727;
+    
+    transition: transform 0.3s ease;
 }
 
-.topButton:hover{
-    transform: scale(1.2); /* 用 scale() 來放大 */
-    transition: transform 1s, color 1s linear;
+.topButton .fa-chevron-up:hover {
+    transform: scale(1.2);
+    color: #7d2727;
 }
-
 
 /* ------------------ topButton (浮動 Go Top) ------------------ */
-
-.sideButton1{
-    color: #ffffff;
-    position: fixed;
-    font-size: 32px;
-
-    transition: all 1s linear;  
-}
-.sideButton1{
-    left: 50px;
-    bottom: 50px; 
-}
-
-.sideButton1 i{
-    color: #333;
-    border: 2px solid #333;
-    border-radius: 50%;
-}
-
-.sideButton1 i:hover{
-    transform: scale(1.2); /* 用 scale() 來放大 */
-    transition: transform 1s, color 1s linear;
-}
 
 
 /* ------------------ footer ------------------ */
@@ -328,6 +306,8 @@ footer{
     padding: 24px 0;
     
     color: #ffffff;
+
+    
 }
 footer .contentFooter{
     width: 950px;
