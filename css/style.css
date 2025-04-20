@@ -463,6 +463,8 @@ footer{
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+
+    min-height: 100vh;
 }
 .item .pic{
     width: 55%;
@@ -534,7 +536,20 @@ footer{
     }
 }
 
-
+.hidden{
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
+.show{
+    opacity: 1;
+    transform: translateX(0%);
+}
 
 /* ------------------- ----- -------------------  */
 /* ------------------- menu  -------------------  */
