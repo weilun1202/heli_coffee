@@ -1,209 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <!-- JQuery lightSlider v1.1.6 -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
     
-    <link rel="stylesheet" href="css/style.css">
 
+    
     <!-- Icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Website Icon -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Website Icon style -->
     <link rel="icon" href="./img/website_icon.svg">
-
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
-    <title>HELI Coffee</title>
+    
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script>
+        $(function(){
+
+            // ---------- Nav 置頂 ----------
+            $('header').css({
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                width: '100%',
+                'z-index': 1000,
+            })
+
+            // ---------- Nav 漢堡變化 ----------
+            $(".hamburger").on("click",function(){          
+                $(".menu").toggleClass("active")
+            }) 
+            
+            // ---------- Swiper 幻燈片 ----------
+            $('.swiper').each(function () {
+
+            let slideImgs = $(this).find('img'),
+                    slideImgsCount = slideImgs.length,
+                    currentIndex = 0;
+
+            slideImgs.eq(currentIndex).fadeIn();
+
+            setInterval(showNextSlide, 3000);
+
+            function showNextSlide() {
+                let nextIndex = (currentIndex + 1) % slideImgsCount;
+                console.log(nextIndex)
+                    slideImgs.eq(currentIndex).fadeOut();
+                    slideImgs.eq(nextIndex).fadeIn();
+                    currentIndex = nextIndex;
+                }
+            })
+
+
+            $('.swiper-2').each(function () {
+
+            let slideImgs = $(this).find('.image-2'),
+                    slideImgsCount = slideImgs.length,
+                    currentIndex = 0;
+
+            slideImgs.eq(currentIndex).fadeIn();
+
+            setInterval(showNextSlide, 3000);
+
+            function showNextSlide() {
+                let nextIndex = (currentIndex + 1) % slideImgsCount;
+                console.log(nextIndex)
+                    slideImgs.eq(currentIndex).fadeOut();
+                    slideImgs.eq(nextIndex).fadeIn();
+                    currentIndex = nextIndex;
+                }
+            })
+
+            // Menu 頁籤切換
+            let $li = $('ul.menuChoose li');
+            $($li. eq(0) .addClass('active').find('a').attr('href')).siblings('.menuArea').hide();
+        
+            $li.click(function(){
+                $($(this).find('a'). attr ('href')).show().siblings ('.menuArea').hide();
+                $(this).addClass('active'). siblings ('.active').removeClass('active');
+            });
+            
+
+
+            // copyright 年份自動更新
+            const currentYear = new Date().getFullYear();
+            // $('footer p').text(`© 2000 - ${currentYear} MyWebsite. All rights reserved.`);
+            $('.copyright p').html(`&copy; 2018 - ${currentYear} Heli coffee. All rights reserved.`);
+        })
+        
+    </script>
+
+
+    <title>Heli coffee</title>
 </head>
 <body>
-    <!-- Nav -->
-    <div id="top"></div>
-    <div class="top">
-        <div class="topMain">
 
-            <a href="index.html">
-                <img src="img/Logo.svg" alt="HeliCoffee">
-            </a>
-        
-            <i class=""></i>
+    <header>
+
+        <nav class="transition menu">
+            <a href="index.html" class="navLogo"><img src="./img/ChatGPT Image.png" alt=""></a>
+            <div class="hamburger">
+                <div class="bar bar1 transition"></div>
+                <div class="bar bar2 transition"></div>
+                <div class="bar bar3 transition"></div>
+            </div>
             
-            <ul>
-                <li><a href="about.html">關於河狸</a></li>
-                <li><a href="menu.html">餐點介紹</a></li>
-                <li><a href="shop.html">選購商品</a></li>
-                <li><a href="yoyaku.html">客席訂位</a></li>
-                <li>
-                    <a href="shoppingcar.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                </li>
-                <!-- <li><i class="fa-solid fa-bars"></i></li> -->
+            <ul class="transition">
+                <li><a class="transition" href="about.html">關於我們</a></li>
+                <li><a class="transition" href="menu.html">餐點介紹</a></li>
+                <li><a class="transition" href="booking.html">訂位資訊</a></li>
+                <li><a class="transition" href="ShoppingCart.html">購物專區</a></li>
             </ul>
 
-        </div>
-    </div>
-    
-    <!-- banner -->
-    <div class="banner">
-        <div class="bannerMain">
-
-            <h1>河狸咖啡</h1>
-            <h2>heli coffee</h2>
-            <p>只想分享咖啡純粹的美好</p>
-
-        </div>
-    </div>
+        </nav>
+    </header>
 
     <main>
-        <!-- swiper -->
-        <div class="swiper">
-            <ul>
-                <li class="swiper1"><img src="img/swiper_01_pexels.jpg" alt=""></li>
-                <li class="swiper2"><img src="img/swiper_02_pexels.jpg" alt=""></li>
-                <li class="swiper3"><img src="img/swiper_03_pexels.jpg" alt=""></li>
-                <li class="swiper4"><img src="img/swiper_04_pexels.jpg" alt=""></li>
-                <li class="swiper5"><img src="img/swiper_05_pexels.jpg" alt=""></li>
-            </ul>
+        <!-- Key Vision -->
+        <div class="kv">
+            <div class="kv-svg">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+
+
+                <h1>河狸咖啡</h1>
+                <h2>Heli coffee</h2>
+                <p>只想好好喝一杯咖啡</p>
+            </div>
         </div>
 
-        <!-- 期間限定 標題 -->
+
+        <div id="container">
+            <div class="ripples">
+                <div></div>
+            </div>
+          </div>
+
+
+
+        <!-- 輪播 最新商品 -->
         <div class="title">
             <h2>期間限定(2025.04)</h2>
         </div>
 
-        <!-- 卡片區 -->
-        <section class="cardArea">
-            <div class="card">
-                <img src="./img/Flag mexico.png" alt="">
-                <div class="cardText">
-                    <h2>墨西哥皮娜塔 SHG 水洗</h2>
-                    <h3>堅果巧克力香氣，黑糖甜韻，尾韻圓潤厚實</h3>
-                    <ul class="cardCost">
-                        <li>熱手沖 $ 120</li>
-                        <li>冰手沖 $ 130</li>
-                        <li>熱手沖藍蕾 $ 180</li>
-                        <li>冰手沖藍蕾 $ 190</li>
-                        <li>半磅 $ 380</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="swiper">
+            <img src="img/card-01-horizontal-pexels.png" class="image">
+            <img src="img/card-02-horizontal-pexels.png" class="image">
+            <img src="img/card-03-horizontal-pexels.png" class="image">
+        </div>
+        
+        <div class="swiper-2">
+            <img src="img/card-01-pexels.png" class="image-2">
+            <img src="img/card-02-pexels.png" class="image-2">
+            <img src="img/card-03-pexels.png" class="image-2">
+        </div>
 
-            <div class="card">
-                <img src="./img/Flag Costa_Rica.svg" alt="">
-                <div class="cardText">
-                    <h2>哥斯大黎加 塔拉珠 牧羊人 SHB 水洗</h2>
-                    <h3>柑橘與白色花香，入口巧克力香氣，黑糖甜韻</h3>
-                    <ul class="cardCost">
-                        <li>熱手沖 $ 120</li>
-                        <li>冰手沖 $ 130</li>
-                        <li>熱手沖藍蕾 $ 180</li>
-                        <li>冰手沖藍蕾 $ 190</li>
-                        <li>半磅 $ 380</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="./img/Flag Ethiopia.svg" alt="">
-                <div class="cardText">
-                    <h2>衣索比亞 西阿爾希區 娜莎豹 G1 日曬</h2>
-                    <h3>莓果香氣，熟果甜，口感圓潤</h3>
-                    <ul class="cardCost">
-                        <li>熱手沖 $ 120</li>
-                        <li>冰手沖 $ 130</li>
-                        <li>熱手沖藍蕾 $ 180</li>
-                        <li>冰手沖藍蕾 $ 190</li>
-                        <li>半磅 $ 380</li>
-                    </ul>
-                </div>
-            </div>
-            
-        </section>
-
-        <!-- 最新消息 標題 -->
+        <!-- 最新消息 -->
         <div class="title">
             <h2>最新消息</h2>
         </div>
 
-        <div class="newsArea">
-            <section class="news">
-                <img src="img/news01.jpg" alt="">
+        <section class="news">
+            <div class="card">
+                <img src="img/trip-01-pexels.jpg" alt="">
                 <div class="cardText">
-                    <h3>店休公告 (3/28)</h3>
-                    <p>
-                        各位河狸朋友好<br>
-                        我們今天3/28(五)店休一日<br>
-                        週末正常營業！<br>
-                        店休期間一樣有接咖啡熟豆和手作甜點訂單<br>
-                        有需要的朋友可以直接來電下訂哦！<br>
-                        謝謝大家！
-                    </p>
+                    <h3>3 / 28 店休一日</h3>
+                    <p>各位河狸朋友好<br>
+                        讓老闆出去放風一下<br>
+                        店休日也不打烊，咖啡熟豆與手作甜點歡迎您預訂選購。</p>
                 </div>
-            </section>
+            </div>
 
-            <section class="news">
-                <img src="img/news02.jpg" alt="">
+            <div class="card">
+                <img src="img/trip-02-pexels.jpg" alt="">
                 <div class="cardText">
-                    <h3>店休公告 (3/19)</h3>
-                    <p>
-                        各位河狸朋友好<br>
-                        3/19(三)～3/20(四)店休兩日<br>
-                        週末正常營業！<br>
-                        星期五會到慈大出攤，建林街店面將再休一日<br>
-                        有需要的朋友可以直接來電下訂哦！<br>
-                        謝謝大家！
-                    </p>
+                    <h3>2 / 28 新品出爐</h3>
+                    <p>各位河狸朋友好<br>
+                        歷經幾個月的努力<br>
+                        新風味咖啡悄悄上架<br>
+                        邀您一同品味這杯春日的驚喜。</p>
                 </div>
-            </section>
+            </div>
 
-        </div>
+            <div class="card">
+                <img src="img/trip-03-pexels.jpg" alt="">
+                <div class="cardText">
+                    <h3>1 / 28 新年快樂 萬事如意</h3>
+                    <p>各位河狸朋友好<br>
+                        終於又過了一年<br>
+                        去年的目標都有實現嗎?<br>
+                        今年大家一起加油吧！</p>
+                </div>
+            </div>
+        </section>
 
-
-        
     </main>
-
+    
     <footer>
+        <!-- topButton (固定底部) -->
         <div class="topButton">
             <a href="#top"><i class="fa-solid fa-chevron-up"></i></a>
         </div>
+        
+        <!-- 主體 -->
+        <div class="topFooter">
 
-        <div class="contentFooter">
-            
-            <div class="infoFooter">
+            <!-- 左邊 -->
+            <div class="footerLeft">
+    
                 <!-- Logo -->
                 <a href="index.html" class="footerLogo">
-                    <img src="./img/logo_white.svg" alt="">
-                </a><br>
+                    <img src="./img/ChatGPT Image.png" alt="">
+                </a>
                 <a href="index.html" class="footerLogo">
                     河狸咖啡
                 </a>
-                
-                <div class="iconFooter">
-
-                    <a href="https://www.facebook.com/HeliCoffee.Taiwan" target="_blank">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                    <!-- <i class="fa-brands fa-instagram"></i> -->
-                </div>
-
+                <!-- Icon -->
+                <a href="https://www.facebook.com/HeliCoffee.Taiwan" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <!-- Info -->
                 <ul>
                     <li>營業時間&nbsp;&nbsp;&nbsp;11:00 ~ 19:00</li>
                     <li>連絡電話&nbsp;&nbsp;&nbsp;<a href="tel:+886-912******">091234567</a></li>
                     <li>門市地址&nbsp;&nbsp;&nbsp;970011 花蓮縣花蓮市建林街6號</li>
                 </ul>
+    
             </div>
-
+    
+            <!-- 右邊 -->
             <div class="facebook">
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FHeliCoffee.Taiwan&tabs=timeline&width=340&height=120&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1185693891584317" width="340" height="120" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FHeliCoffee.Taiwan&tabs=timeline&width=340&height=120&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1185693891584317" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
 
         </div>
 
+        <!-- 下方 -->
         <div class="copyright">
-            Copyright &copy; 2025 Heli coffee
+            <p> </p>
         </div>
 
     </footer>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <!-- JQuery lightSlider v1.1.6 -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+    
+
+    
+    <!-- Icon -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Website Icon style -->
+    <link rel="icon" href="./img/website_icon.svg">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script>
+        $(function(){
+
+            // ---------- Nav 置頂 ----------
+            $('header').css({
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                width: '100%',
+                'z-index': 1000,
+            })
+
+            // ---------- Nav 漢堡變化 ----------
+            $(".hamburger").on("click",function(){          
+                $(".menu").toggleClass("active")
+            }) 
+            
+            // ---------- Swiper 幻燈片 ----------
+            $('.swiper').each(function () {
+
+            let slideImgs = $(this).find('img'),
+                    slideImgsCount = slideImgs.length,
+                    currentIndex = 0;
+
+            slideImgs.eq(currentIndex).fadeIn();
+
+            setInterval(showNextSlide, 3000);
+
+            function showNextSlide() {
+                let nextIndex = (currentIndex + 1) % slideImgsCount;
+                console.log(nextIndex)
+                    slideImgs.eq(currentIndex).fadeOut();
+                    slideImgs.eq(nextIndex).fadeIn();
+                    currentIndex = nextIndex;
+                }
+            })
+
+            // Menu 頁籤切換
+            let $li = $('ul.menuChoose li');
+            $($li. eq(0) .addClass('active').find('a').attr('href')).siblings('.menuArea').hide();
+        
+            $li.click(function(){
+                $($(this).find('a'). attr ('href')).show().siblings ('.menuArea').hide();
+                $(this).addClass('active'). siblings ('.active').removeClass('active');
+            });
+
+            
+
+            // copyright 年份自動更新
+            const currentYear = new Date().getFullYear();
+            // $('footer p').text(`© 2000 - ${currentYear} MyWebsite. All rights reserved.`);
+            $('.copyright p').html(`&copy; 2018 - ${currentYear} Heli coffee. All rights reserved.`);
+        })
+
+    </script>
+
+
+    <title>Heli coffee</title>
+</head>
+<body>
+
+    <header>
+
+        <nav class="transition menu">
+            <a href="index.html" class="navLogo"><img src="./img/ChatGPT Image.png" alt=""></a>
+            <div class="hamburger">
+                <div class="bar bar1 transition"></div>
+                <div class="bar bar2 transition"></div>
+                <div class="bar bar3 transition"></div>
+            </div>
+            
+            <ul class="transition">
+                <li><a class="transition" href="about.html">關於我們</a></li>
+                <li><a class="transition nowPlace" href="menu.html">餐點介紹</a></li>
+                <li><a class="transition" href="booking.html">訂位資訊</a></li>
+                <li><a class="transition" href="ShoppingCart.html">購物專區</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+        <!-- 店內餐點 -->
+        <div class="title runNav">
+            <h2>餐點介紹</h2>
+        </div>
+
+        <div class="menu-coffee">
+
+            <div class="menu-coffee-img">
+                <img src="img/menu_06_pexels.jpg" alt="">
+            </div>
+            
+            <div class="menu-coffee-txt">
+                <h2>河狸咖啡配方豆</h2>
+                <h3>香料與檀木香氣，酸甜平衡，口感滑順</h3>
+
+                <div class="menu-coffee-info">
+                    <ul>
+                        <li>國家：台灣</li>
+                        <li>老闆依據當月買進的咖啡豆調配而成</li>
+                        <li>&nbsp;</li>
+                        <li>&nbsp;</li>
+                        <li>&nbsp;</li>
+                    </ul>
+                </div>
+                <br>
+
+                <div class="menu-coffee-price">
+                    <ul>
+                        <li>熱手沖：$ 120</li>
+                        <li>冰手沖：$ 130</li>
+                        <li>熱手沖歐蕾：$ 180</li>
+                        <li>冰手沖歐蕾：$ 190</li>
+                        <li>半磅：$ 380</li>
+                    </ul>
+                </div>
+                <input type ="button" class="GoBack" onclick="history.back()" value="回到上一頁"></input>
+
+            </div>
+        </div>
+
+    </main>
+
+
+    
+    <footer>
+        <!-- topButton (固定底部) -->
+        <div class="topButton">
+            <a href="#top"><i class="fa-solid fa-chevron-up"></i></a>
+        </div>
+        
+        <!-- 主體 -->
+        <div class="topFooter">
+
+            <!-- 左邊 -->
+            <div class="footerLeft">
+    
+                <!-- Logo -->
+                <a href="index.html" class="footerLogo">
+                    <img src="./img/ChatGPT Image.png" alt="">
+                </a>
+                <a href="index.html" class="footerLogo">
+                    河狸咖啡
+                </a>
+                <!-- Icon -->
+                <a href="https://www.facebook.com/HeliCoffee.Taiwan" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <!-- Info -->
+                <ul>
+                    <li>營業時間&nbsp;&nbsp;&nbsp;11:00 ~ 19:00</li>
+                    <li>連絡電話&nbsp;&nbsp;&nbsp;<a href="tel:+886-912******">091234567</a></li>
+                    <li>門市地址&nbsp;&nbsp;&nbsp;970011 花蓮縣花蓮市建林街6號</li>
+                </ul>
+    
+            </div>
+    
+            <!-- 右邊 -->
+            <div class="facebook">
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FHeliCoffee.Taiwan&tabs=timeline&width=340&height=120&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1185693891584317" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+
+        </div>
+
+        <!-- 下方 -->
+        <div class="copyright">
+            <p> </p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
